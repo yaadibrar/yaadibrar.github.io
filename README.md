@@ -104,10 +104,9 @@
         }
         .captcha-checkbox { margin-right: 15px; width: 22px; height: 22px; cursor: pointer; accent-color: #e91e63; }
 
-        /* 🎪 Code Generated Animated Stickers (Will Never Block!) */
         .animated-emoji {
-            font-size: 100px;
-            margin-bottom: 20px;
+            font-size: 90px;
+            margin-bottom: 15px;
             display: inline-block;
             animation: bounce-wiggle 2s infinite ease-in-out;
         }
@@ -127,7 +126,6 @@
             object-fit: cover; 
         }
         
-        /* 🐾 3 Dog Custom Stickers Display */
         .dog-stickers-container { display: flex; justify-content: space-around; margin: 25px 0; gap: 10px; }
         .dog-sticker {
             font-size: 55px;
@@ -167,7 +165,6 @@
             0% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 1; }
             100% { transform: translateY(-105vh) translateX(60px) rotate(360deg); opacity: 0; }
         }
-        #musicPlayer { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
     </style>
 </head>
 <body>
@@ -178,8 +175,6 @@
     <div class="wall-deco" style="top: 20%; right: 5%;">🎈</div>
     <div class="wall-deco" style="bottom: 15%; left: 5%;">💖</div>
     <div class="wall-deco" style="bottom: 10%; right: 8%;">💖</div>
-
-    <div id="musicPlayer"></div>
 
     <div id="step1" class="card">
         <h2>Enter the password to view</h2>
@@ -205,9 +200,9 @@
     </div>
 
     <div id="step3" class="card hidden">
-        <img class="bday-image" src="https://i.ibb.co/nq00DJVK/1781543226140.png">
+        <img class="bday-image" src="https://i.ibb.co/nq00DJVK/1781543226140.png" alt="First Special Photo">
         <h2>HAPPY BIRTHDAY JASHAN! 💖</h2>
-        <p>You are not a headache,you are my favorite notification.<br>Stay cute, stay happy, stay mine. 🎀</p>
+        <p>You are my favorite notification.<br>ਹੱਸਦੀ ਵੱਸਦੀ ਰਹਿ ਰੱਬ ਤੇਨੂੰ ਖੁਸ਼ੀਆਂ ਦੇਵੇ 🎀</p>
         <button onclick="nextStep(4)">Next</button>
     </div>
 
@@ -219,8 +214,8 @@
 
     <div id="step5" class="card hidden">
         <h2>My Letter to You 💕</h2>
-        <p style="font-size: 23px; font-weight: bold; color: #d81b60; margin-bottom: 25px; font-family: 'Fredoka One', cursive;">
-            "Lao Madam ji Khaas wish tuhade lyi,kuch bnaaya tere lyi YouTube te check kar la"
+        <p style="font-size: 19px; font-weight: bold; color: #d81b60; margin-bottom: 25px; line-height: 1.6;">
+            "ਇਹ ਸਾਰੀ ਵੈਬਸਾਈਟ ਮੈ ਤੇਰੇ ਲਈ ਬਣਾਈ ਹੈ ਏ, ਉਮੀਦ ਕਰਦਾ ਤੈਨੂੰ ਇਹ ਵਿਸ਼ ਪਸੰਦ ਆਉਗੀ, ਧਿਆਨ ਨਾਲ ਦੇਖ ਲਵੀਂ ਸਾਰਾ। ਅੱਗੇ ਇੱਕ ਗਾਣਾ youtube ਤੇ ਅਪਲੋਡ ਕੀਤਾ ਮੈਂ ਤੇਰੇ ਲਈ ਹੀ ਲਿਖਿਆ 🥰"
         </p>
         <div class="dog-stickers-container">
             <div class="dog-sticker">🐶🎂</div>
@@ -232,22 +227,16 @@
 
     <div id="step6" class="card hidden">
         <h2>Here's a final surprise for you!!!</h2>
-        <div class="animated-emoji" style="cursor: pointer; font-size: 110px;" onclick="triggerFinalSurprise()">🎁</div>
+        <img class="bday-image" src="https://i.ibb.co/1YLJ1Lsn/file-00000000981c71fa826136dbbbb11785.png" alt="Second Special Photo"><br>
+        <div class="animated-emoji" style="cursor: pointer; font-size: 80px; margin-top: 10px;" onclick="redirectToYouTube()">🎁</div>
         <p>Tap the gift box to open it!</p>
-    </div>
-
-    <div id="step7" class="card hidden">
-        <h2>Here is a surprise for you!!! 🎁🌟</h2>
-        <div class="animated-emoji" style="font-size: 120px;">🧸🤗</div>
-        <h2>Here is virtual hug for you 🤗</h2>
-        <p style="font-weight: bold; color: #d81b60; font-size: 20px;">I love you to the moon and back!</p>
     </div>
 
     <script>
         const CORRECT_PASSWORD = "yaadi's surprise"; 
         
-        // 🎵 ਇੱਥੇ ਆਪਣਾ YouTube Video ID ਪਾਓ (ਜਿਵੇਂ "dQw4w9WgXcQ")
-        const YOUTUBE_VIDEO_ID = "dQw4w9WgXcQ"; 
+        // 🎵 ਤੁਹਾਡਾ YouTube ਲਿੰਕ
+        const YOUTUBE_URL = "https://youtu.be/yJXA-Imbc_o?feature=shared"; 
 
         let stickerInterval;
 
@@ -265,10 +254,10 @@
             }
         }
 
-        function triggerFinalSurprise() {
-            nextStep(7);
-            const playerDiv = document.getElementById('musicPlayer');
-            playerDiv.innerHTML = `<iframe src="https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&loop=1&playlist=${YOUTUBE_VIDEO_ID}" allow="autoplay"></iframe>`;
+        function redirectToYouTube() {
+            // ਰੀਡਾਇਰੈਕਟ ਹੋਣ ਤੋਂ ਪਹਿਲਾਂ ਅਖੀਰਲਾ ਪਿਆਰਾ ਪੰਜਾਬੀ ਮੈਸੇਜ ਅਲਰਟ ਬਾਕਸ ਵਿੱਚ ਸ਼ੋਅ ਹੋਵੇਗਾ!
+            alert("ਮੈਂ ਹਰ ਕੋਸ਼ਿਸ਼ ਕਰਾਂਗਾ ਤੇਨੂੰ ਆਪਣੀ ਜ਼ਿੰਦਗੀ ਦਾ ਹਿੱਸਾ ਬਣਾਉਣ ਲਈ 😄");
+            window.location.href = YOUTUBE_URL;
         }
 
         function nextStep(stepNumber) {
