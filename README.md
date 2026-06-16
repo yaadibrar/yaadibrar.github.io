@@ -233,7 +233,7 @@
     </div>
 
     <script>
-        const CORRECT_PASSWORD = "jashan's birthday"; 
+        const CORRECT_PASSWORD = "yaadi's surprise"; 
         
         // 🎵 ਤੁਹਾਡਾ YouTube ਲਿੰਕ
         const YOUTUBE_URL = "https://youtu.be/yJXA-Imbc_o?feature=shared"; 
