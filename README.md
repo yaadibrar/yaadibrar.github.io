@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Special Surprise for Jashan ❤️</title>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
-    
     <style>
-        /* Base Styling & Background Wall Theme */
         body {
             font-family: 'Quicksand', sans-serif;
-            background-color: #fff0f5; /* Soft Lavender Blush */
+            background-color: #fff0f5;
             background-image: 
                 radial-gradient(#ffb6c1 10%, transparent 11%),
                 radial-gradient(#ffb6c1 10%, transparent 11%);
@@ -25,7 +23,6 @@
             position: relative;
         }
 
-        /* Background Wall Deco (Balloons & Hearts) */
         .wall-deco {
             position: absolute;
             font-size: 50px;
@@ -35,7 +32,6 @@
             z-index: 1;
         }
 
-        /* Glassmorphism Card (Lovely Soft Look) */
         .card {
             background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(10px);
@@ -51,9 +47,7 @@
             z-index: 10;
         }
 
-        .hidden {
-            display: none !important;
-        }
+        .hidden { display: none !important; }
 
         h2 { 
             font-family: 'Fredoka One', cursive;
@@ -61,17 +55,10 @@
             margin-bottom: 20px;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
             font-size: 26px;
-            letter-spacing: 0.5px;
         }
         
-        p { 
-            color: #6d4c41; 
-            line-height: 1.6; 
-            font-size: 19px; 
-            font-weight: 700;
-        }
+        p { color: #6d4c41; line-height: 1.6; font-size: 19px; font-weight: 700; }
 
-        /* Inputs */
         input[type="password"] {
             font-family: 'Quicksand', sans-serif;
             padding: 12px; 
@@ -85,13 +72,8 @@
             color: #d81b60;
             outline: none;
             background-color: #fffafb;
-            transition: border-color 0.3s;
-        }
-        input[type="password"]:focus {
-            border-color: #e91e63;
         }
 
-        /* Lovely Rounded Buttons */
         button {
             font-family: 'Quicksand', sans-serif;
             background: linear-gradient(135deg, #ff4081, #ec407a);
@@ -103,16 +85,14 @@
             cursor: pointer;
             font-weight: bold;
             box-shadow: 0 5px 15px rgba(233, 30, 99, 0.3);
-            transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+            transition: transform 0.2s, box-shadow 0.2s;
             margin: 10px;
         }
         button:hover { 
             background: linear-gradient(135deg, #e91e63, #c2185b);
             transform: translateY(-3px) scale(1.03); 
-            box-shadow: 0 8px 20px rgba(233, 30, 99, 0.4);
         }
 
-        /* Captcha Box Style */
         .captcha-container {
             border: 2px dashed #ffb6c1;
             background: #fffafb;
@@ -124,9 +104,19 @@
         }
         .captcha-checkbox { margin-right: 15px; width: 22px; height: 22px; cursor: pointer; accent-color: #e91e63; }
 
-        /* Images & Stickers */
-        .gif-display { width: 160px; height: 160px; margin-bottom: 20px; object-fit: contain; }
-        
+        /* 🎪 Code Generated Animated Stickers (Will Never Block!) */
+        .animated-emoji {
+            font-size: 100px;
+            margin-bottom: 20px;
+            display: inline-block;
+            animation: bounce-wiggle 2s infinite ease-in-out;
+        }
+
+        @keyframes bounce-wiggle {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(8deg); }
+        }
+
         .bday-image { 
             width: 210px; 
             height: 210px; 
@@ -137,28 +127,36 @@
             object-fit: cover; 
         }
         
+        /* 🐾 3 Dog Custom Stickers Display */
         .dog-stickers-container { display: flex; justify-content: space-around; margin: 25px 0; gap: 10px; }
-        .dog-stickers-container img { 
-            width: 30%; 
-            height: 110px; 
-            border-radius: 15px; 
-            object-fit: contain; 
+        .dog-sticker {
+            font-size: 55px;
             background: #fffafc; 
             border: 2px dashed #ffb6c1; 
-            padding: 5px; 
-            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            padding: 10px;
+            border-radius: 20px;
+            width: 25%;
+            animation: dance 1.5s infinite ease-in-out alternate;
+        }
+        .dog-sticker:nth-child(2) { animation-delay: 0.3s; }
+        .dog-sticker:nth-child(3) { animation-delay: 0.6s; }
+
+        @keyframes dance {
+            0% { transform: scale(0.9) rotate(-5deg); }
+            100% { transform: scale(1.1) rotate(5deg); }
         }
 
-        /* Envelope */
-        .envelope { font-size: 85px; cursor: pointer; transition: transform 0.3s; display: inline-block; }
+        .envelope { font-size: 85px; cursor: pointer; transition: transform 0.3s; display: inline-block; animation: pulse 2s infinite; }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+        }
         .envelope:hover { transform: scale(1.15) rotate(-5deg); }
 
-        /* Floating Stickers (Live Generation) */
         .sticker {
             position: absolute;
             bottom: -50px;
             font-size: 32px;
-            cursor: default;
             user-select: none;
             pointer-events: none;
             animation: floatUp 4.2s linear forwards;
@@ -169,7 +167,6 @@
             0% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 1; }
             100% { transform: translateY(-105vh) translateX(60px) rotate(360deg); opacity: 0; }
         }
-
         #musicPlayer { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
     </style>
 </head>
@@ -187,32 +184,30 @@
     <div id="step1" class="card">
         <h2>Enter the password to view</h2>
         <input type="password" id="passwordInput" placeholder="Enter password..."><br>
-        
         <div class="captcha-container">
             <input type="checkbox" id="captchaBox" class="captcha-checkbox">
             <span style="font-size: 15px; color: #6d4c41; font-weight: bold;">I'm not a robot</span>
         </div><br>
-        
         <button onclick="checkStep1()">Continue</button>
     </div>
 
     <div id="step2" class="card hidden">
-        <img class="gif-display" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWdtcm93YThndm95Z3VwY2N5bWZndWZ0amZ6N293bXp5NjZpYmdpayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/9fUVkwgxoFfAvFgG33/giphy.gif" alt="Puppy holding flower">
+        <div class="animated-emoji">🐶💐</div>
         <h2>HEY JASHAN!! <br>I made something for you.<br>Do you want to see?</h2>
         <button onclick="nextStep(3)">Yes</button>
         <button id="noBtn" onclick="tryClickNo()">No</button>
     </div>
 
     <div id="stepAngry" class="card hidden">
-        <img class="gif-display" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3Z0MzdpaXN4YnY2dnB0ZmluYnVvNzU3ZzNiaWZ3Y3FubXozN3VvdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/WwG96v7fPn8T2Vp7Ie/giphy.gif" alt="Angry puppy">
+        <div class="animated-emoji">😤🐕</div>
         <h2>HOW DARE YOU! 😂</h2>
         <button onclick="backToQuestion()">Go back and pick Yes! 💖</button>
     </div>
 
     <div id="step3" class="card hidden">
-        <img class="bday-image" src="https://i.ibb.co/nq00DJVK/1781543226140.png" alt="Birthday Special Photo">
+        <img class="bday-image" src="https://i.ibb.co/nq00DJVK/1781543226140.png">
         <h2>HAPPY BIRTHDAY JASHAN! 💖</h2>
-        <p>You are my favorite notification.<br>Stay cute, stay happy, stay mine. 🎀</p>
+        <p>You are not a headache,you are my favorite notification.<br>Stay cute, stay happy, stay mine. 🎀</p>
         <button onclick="nextStep(4)">Next</button>
     </div>
 
@@ -225,35 +220,33 @@
     <div id="step5" class="card hidden">
         <h2>My Letter to You 💕</h2>
         <p style="font-size: 23px; font-weight: bold; color: #d81b60; margin-bottom: 25px; font-family: 'Fredoka One', cursive;">
-            "Lao Madam ji Khaas wish tuhade lyi"
+            "Lao Madam ji Khaas wish tuhade lyi,kuch bnaaya tere lyi YouTube te check kar la"
         </p>
-        
         <div class="dog-stickers-container">
-            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmtpbnkyajA5Y2I4eHh3NmIxcTZvMzJpcWtzMW13MXV1MmhuZTA2MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/WwA7266V2p9D8rR9Oq/giphy.gif" alt="Birthday Dog 1">
-            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzRiaWR3dzN6MmVwOGxtZHdyZ3l1b2x0cmhjd3d4aWgyc3ExNHoxdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/gImsKzPrc8v4fS76b0/giphy.gif" alt="Birthday Dog 2">
-            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXU5ZWwyc3RtdzUzdzZ5a3Jid3d4ZHpnemw4bWszcmhvb3owNWt4byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/jUon4P3xHhAEvpOfK3/giphy.gif" alt="Birthday Dog 3">
+            <div class="dog-sticker">🐶🎂</div>
+            <div class="dog-sticker">🐕🎈</div>
+            <div class="dog-sticker">🦮🎉</div>
         </div>
         <button onclick="nextStep(6)">Click here</button>
     </div>
 
     <div id="step6" class="card hidden">
         <h2>Here's a final surprise for you!!!</h2>
-        <img class="gif-display" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzY5Y2w2Z3RnaTZvdnpteXUybTFhZXAybGZ5Z240MHhtdmRjMmRhNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/L32gqR8zG38LqV8L4K/giphy.gif" alt="Gift box" style="cursor: pointer; width: 180px; height: 180px;" onclick="triggerFinalSurprise()">
+        <div class="animated-emoji" style="cursor: pointer; font-size: 110px;" onclick="triggerFinalSurprise()">🎁</div>
         <p>Tap the gift box to open it!</p>
     </div>
 
     <div id="step7" class="card hidden">
         <h2>Here is a surprise for you!!! 🎁🌟</h2>
-        <img class="gif-display" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWwxdGg1ZzdicTJwNXg1M3gzMGxnd2dzYTM3dW5pdmluZTh0amxjOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/9unqM66sC536G4DcoG/giphy.gif" alt="Cute mocha bear hug" style="width: 230px; height: 230px; margin-bottom: 10px;">
+        <div class="animated-emoji" style="font-size: 120px;">🧸🤗</div>
         <h2>Here is virtual hug for you 🤗</h2>
         <p style="font-weight: bold; color: #d81b60; font-size: 20px;">I love you to the moon and back!</p>
     </div>
 
     <script>
-        // --- ⚙️ CUSTOMIZATION CONFIGURATION ⚙️ ---
         const CORRECT_PASSWORD = "yaadi's surprise"; 
         
-        // 🎵 ਇੱਥੇ ਆਪਣਾ YouTube Video ID ਪਾਓ 
+        // 🎵 ਇੱਥੇ ਆਪਣਾ YouTube Video ID ਪਾਓ (ਜਿਵੇਂ "dQw4w9WgXcQ")
         const YOUTUBE_VIDEO_ID = "dQw4w9WgXcQ"; 
 
         let stickerInterval;
@@ -288,13 +281,10 @@
             document.getElementById('stepAngry').classList.remove('hidden');
         }
 
-        function backToQuestion() {
-            nextStep(2);
-        }
+        function backToQuestion() { nextStep(2); }
 
-        // Live Floating Stickers Generator (Balloons & Hearts Burst)
         function startStickers() {
-            const stickerTypes = ['🎈', '💖', '🎂', '🎈', '🧸', '✨', '🌸', '❤️', '🥰', '🎈'];
+            const stickerTypes = ['🎈', '💖', '🎂', '🎈', '🧸', '✨', '🌸', '❤️', '🥰'];
             stickerInterval = setInterval(() => {
                 const sticker = document.createElement('div');
                 sticker.classList.add('sticker');
